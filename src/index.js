@@ -3,11 +3,36 @@ import ReactDOM from "react-dom/client";
 import "remixicon/fonts/remixicon.css";
 import "bootstrap/dist/css/bootstrap.css";
 
+import 'react-toastify/dist/ReactToastify.css';
 import App from "./App";
-
+import {BrowserRouter } from 'react-router-dom'
+import store from "./redux/store";
+import { Provider } from "react-redux";
+import { ToastContainer } from 'react-toastify'
+import { PersistGate } from "redux-persist/integration/react";
+import { persistor } from "./redux/slices/cartSlice";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+    <Provider store={store}>
+      <ToastContainer 
+      position="top-right"
+      autoClose={3000}
+      
+      closeOnClick
+      
+      pauseOnHover
+      theme="dark"
+      />
+            <PersistGate persistor={persistor}>
+            <App />
+
+            </PersistGate>
+
+    </Provider>
+  
+    </BrowserRouter>
+  
   </React.StrictMode>
 );

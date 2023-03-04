@@ -1,0 +1,41 @@
+.timer_count{
+    background-color: var(--primary-color);
+    height: 300px;
+}
+.timer_count img{
+    width: 70% !important;
+    height: 70% !important;
+    object-fit: contain;
+}
+.store__btn{
+    background: #fff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+@media screen and (max-width:992px) {
+    .counter__img{
+        display: none;
+    }
+    .clock__top-content{
+
+        text-align: center;
+    }
+    .clock__wrapper{
+        justify-content: center;
+    }
+    .clock__top-content h3{
+        font-size: 1rem !important;
+    }
+    .clock__top-content h4{
+        font-size: 0.9rem !important;
+    }
+    .clock__data h1{
+        font-size: 1.1rem !important;
+    }
+    .clock__data h5{
+        font-size: 0.9rem !important;
+    }
+    .count_down-col{
+        text-align: center;
+    }
+}
